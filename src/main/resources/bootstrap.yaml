@@ -1,0 +1,14 @@
+server: 
+  port: ${server_port:8081}
+spring: 
+  application:
+    name: hystrix-client-springcloud 
+  cloud: 
+    config: 
+      uri: ${config_server:http://localhost:9001} 
+      searchPath: ${spring.application.name}
+  config: 
+    active: ${profile:local}
+    include: common
+
+
