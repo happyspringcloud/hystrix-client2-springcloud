@@ -3,6 +3,8 @@ package com.springcloud;
 import java.util.Collections;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Component;
@@ -16,14 +18,19 @@ import lombok.extern.slf4j.Slf4j;
 @Component
 @RequiredArgsConstructor
 @Slf4j
+@RefreshScope
 public class CoffeeComponent {
 	private final RestTemplate coffeeRestTemplate;
 	
+	@Value("${hystrixServiceHost:http://localhost:8003")
+	private String hystrixServiceHost;
+
+    
 	@HystrixCommand(fallbackMethod="getCoffeeFallback")
 	public List<String> getCoffee(String param) {
 		return coffeeRestTemplate
 				.exchange(
-						"http://localhost:8003/api/coffees/"+param, 
+						hystrixServiceHost+"/api/coffees/"+param, 
 						HttpMethod.GET, 
 						null, 
 						new ParameterizedTypeReference<List <String>>() {}
