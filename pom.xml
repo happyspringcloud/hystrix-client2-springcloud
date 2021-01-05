@@ -88,6 +88,7 @@
 	</dependencyManagement>
 
 	<build>
+		<finalName>hystrix-client-springcloud</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
