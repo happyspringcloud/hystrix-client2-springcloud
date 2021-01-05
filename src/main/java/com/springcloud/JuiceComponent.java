@@ -19,7 +19,7 @@ import lombok.RequiredArgsConstructor;
 public class JuiceComponent {
 	private final RestTemplate juiceRestTemplate;
 	
-	@Value("${hystrixServiceHost:http://localhost:8003")
+	@Value("${hystrixServiceHost:'http://localhost:8003'}")
 	private String hystrixServiceHost;
 	
 	@HystrixCommand
