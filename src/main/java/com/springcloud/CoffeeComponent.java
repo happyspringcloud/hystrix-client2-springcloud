@@ -22,7 +22,7 @@ import lombok.extern.slf4j.Slf4j;
 public class CoffeeComponent {
 	private final RestTemplate coffeeRestTemplate;
 	
-	@Value("${hystrixServiceHost:'http://localhost:8003'}")
+	@Value("${hystrixServiceHost:http://localhost:8003}")
 	private String hystrixServiceHost;
 	
 	@HystrixCommand(fallbackMethod="getCoffeeFallback")
