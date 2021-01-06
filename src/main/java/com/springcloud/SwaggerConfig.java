@@ -16,7 +16,7 @@ public class SwaggerConfig {
 	@Bean
 	public Docket api() {
 		ApiInfo api_info = new ApiInfoBuilder()
-				.title("Client service to test Hystrix")
+				.title("Client service2 to test Hystrix")
 				.description("This is sample service for Hystrix")
 				.version("1.0.0") 
 				.build();

@@ -16,14 +16,14 @@ import lombok.RequiredArgsConstructor;
 @Component
 @RequiredArgsConstructor
 @RefreshScope
-public class JuiceComponent {
+public class JuiceComponent2 {
 	private final RestTemplate juiceRestTemplate;
 	
 	@Value("${hystrixServiceHost:http://localhost:8003}")
 	private String hystrixServiceHost;
 	
 	@HystrixCommand
-	public List<String> getJuice() {
+	public List<String> getJuice2() {
 		return juiceRestTemplate
 				.exchange(
 						hystrixServiceHost+"/api/juices", 

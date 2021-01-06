@@ -9,10 +9,10 @@ import org.springframework.context.ApplicationContext;
 @SpringBootApplication
 @EnableDiscoveryClient 
 @EnableCircuitBreaker
-public class HystrixClientSpringcloudApplication {
+public class HystrixClient2SpringcloudApplication {
 
 	public static void main(String[] args) {
-		ApplicationContext context = SpringApplication.run(HystrixClientSpringcloudApplication.class, args);
+		ApplicationContext context = SpringApplication.run(HystrixClient2SpringcloudApplication.class, args);
 		System.out.println("Beans==>"+String.join(", ", context.getBeanDefinitionNames()));
 	}
 

@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.springcloud</groupId>
-	<artifactId>hystrix-client-springcloud</artifactId>
+	<artifactId>hystrix-client2-springcloud</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>hystrix-client-springcloud</name>
+	<name>hystrix-client2-springcloud</name>
 	<description>client service to test hystrix</description>
 
 	<properties>
@@ -84,7 +84,7 @@
 	</dependencyManagement>
 
 	<build>
-		<finalName>hystrix-client-springcloud</finalName>
+		<finalName>hystrix-client2-springcloud</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

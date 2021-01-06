@@ -9,15 +9,15 @@ import lombok.RequiredArgsConstructor;
 @Service
 @RequiredArgsConstructor
 public class CafeService {
-	private final CoffeeComponent coffeeComponent;
-	private final JuiceComponent juiceComponent;
+	private final CoffeeComponent2 coffeeComponent;
+	private final JuiceComponent2 juiceComponent;
 	
 	public List<String> getCoffee(String param) {
-		return coffeeComponent.getCoffee(param);
+		return coffeeComponent.getCoffee2(param);
 	}
 	
 	public List<String> getJuice() {
-		return juiceComponent.getJuice();
+		return juiceComponent.getJuice2();
 	}
 	
 }

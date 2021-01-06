@@ -19,14 +19,14 @@ import lombok.extern.slf4j.Slf4j;
 @RequiredArgsConstructor
 @Slf4j
 @RefreshScope
-public class CoffeeComponent {
+public class CoffeeComponent2 {
 	private final RestTemplate coffeeRestTemplate;
 	
 	@Value("${hystrixServiceHost:http://localhost:8003}")
 	private String hystrixServiceHost;
 	
 	@HystrixCommand(fallbackMethod="getCoffeeFallback")
-	public List<String> getCoffee(String param) {
+	public List<String> getCoffee2(String param) {
 		log.info("hystrix service host=>"+hystrixServiceHost);
 		
 		return coffeeRestTemplate

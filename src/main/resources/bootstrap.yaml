@@ -1,8 +1,8 @@
 server: 
-  port: ${service_port:8081}
+  port: ${service_port:8082}
 spring: 
   application:
-    name: hystrix-client-springcloud 
+    name: hystrix-client2-springcloud 
   cloud: 
     config: 
       uri: ${config_servers:http://localhost:9001} 
